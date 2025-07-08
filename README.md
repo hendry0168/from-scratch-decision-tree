@@ -1,7 +1,6 @@
 # From Scratch Decision Tree
 
-A learning-focused Python implementation of a decision tree classifier for numeric binary classification problems.
-
+A learning project demonstrates building a **Decision Tree Classifier from scratch in Python**, training it on HR data from **SQL Server**, and comparing it with a scikit-learn baseline.
 ---
 
 ## 🚀 Overview
@@ -17,12 +16,18 @@ This project demonstrates how a decision tree algorithm works by building it **f
 
 ---
 
-## ✨ Key Features
+**Goal:** Predict whether employees are likely to leave the company based on:
 
-✅ Train a decision tree classifier on numeric data with exactly **two target classes (0/1).**  
-✅ Visualize how the algorithm splits the feature space.  
-✅ Analyze which features contributed most to decisions.  
-✅ Evaluate performance with accuracy, precision, recall, and confusion matrix.
+- Gender
+- Current Level
+- Tenure
+- Age
+- Education Level
+
+**Technologies:**
+- Python (Pandas, Numpy)
+- Scikit-learn
+- SQL Server (via pyodbc)
 
 ---
 
@@ -38,18 +43,32 @@ This project demonstrates how a decision tree algorithm works by building it **f
 
 ---
 
-## 🧩 Visualizations
+## 🧠 What I Did
 
-The project includes examples to:
-
-- Plot **decision boundaries** using Matplotlib.
-- Show **feature importance** as bar charts.
-- Display **confusion matrix** for model evaluation.
+- Implemented a Decision Tree Classifier without any ML libraries.
+- Wrote code to connect Python to SQL Server to extract HR data.
+- Preprocessed the data (feature engineering, stratified splitting).
+- Compared predictions and accuracy between my custom model and scikit-learn.
+- Evaluated model performance with confusion matrix and accuracy metrics.
 
 ---
 
-## 📝 Usage
+## 📊 Results
 
-1. Install dependencies:
-   ```bash
-   pip install numpy pandas matplotlib scikit-learn
+| Model               | Accuracy |
+|---------------------|----------|
+| Custom Decision Tree| 52.9%    |
+| Scikit-learn        | 53.8%    |
+
+Note: The relatively low accuracy reflects the limited predictive power of the available features. This is common in real-world HR datasets.
+
+---
+
+## 📝 What I Learned
+
+- How to implement tree-based classifiers from first principles.
+- How to calculate Gini impurity and information gain.
+- How to combine SQL Server data pipelines with Python ML workflows.
+- The importance of feature engineering and data quality in predictive modeling.
+
+---
